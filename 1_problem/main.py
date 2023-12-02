@@ -34,7 +34,7 @@ def process_input():
     with open('input.txt','r') as f:
         lines = f.readlines()
         for line in lines:
-            left = re.search("(one|two|three|four|five|six|seven|eight|nine|[0-9])",line).group(0)
+            left =  re.search("(one|two|three|four|five|six|seven|eight|nine|[0-9])",line).group(0)
             right = re.search("(eno|owt|eerht|ruof|evif|xis|neves|thgie|enin|[0-9])",line[::-1]).group(0)
             if left and right:
                 first = conv_to_int(left)
